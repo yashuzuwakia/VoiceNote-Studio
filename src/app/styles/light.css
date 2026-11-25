@@ -1,0 +1,182 @@
+:root[data-appearance='light'] {
+  color-scheme: light;
+  color: #252137;
+  background: #f5f3f9;
+  --surface: #fff;
+  --inset: #fbfaff;
+  --line: #e5e0ed;
+  --muted: #625b75;
+  --accent: #6542bb;
+  --accent-ink: #fff;
+}
+
+[data-appearance='light'] button,
+[data-appearance='light'] input:not([type='checkbox'], [type='range']),
+[data-appearance='light'] select {
+  background-color: #f8f6fc;
+}
+[data-appearance='light'] button:hover:not(:disabled) {
+  background-color: #eee8fa;
+}
+[data-appearance='light']
+  :is(
+    .subtle,
+    .tabs button,
+    .project-title input:not([type]),
+    .message-tools select
+  ) {
+  background-color: transparent;
+}
+[data-appearance='light'] :is(.panel, .timeline) {
+  box-shadow: 0 2px 8px #38265b0b;
+}
+[data-appearance='light'] :is(.editor, .timeline) {
+  border-color: #e1dbeb;
+}
+[data-appearance='light']
+  :is(.brand h1 span, .field, .preview-head code, .format) {
+  color: #5b5271;
+}
+[data-appearance='light'] .brand-icon {
+  color: #512aab;
+  background: #e9e0fb;
+}
+[data-appearance='light'] .primary {
+  color: #fff;
+  background-color: #6542bb;
+}
+[data-appearance='light'] .primary:hover:not(:disabled) {
+  background-color: #54329e;
+}
+[data-appearance='light'] .appearance-toggle {
+  color: #573597;
+}
+[data-appearance='light'] .save-state.saved svg {
+  color: #23704f;
+}
+[data-appearance='light'] .save-state.offline {
+  color: #9a342b;
+}
+[data-appearance='light'] code {
+  color: #423851;
+}
+[data-appearance='light']
+  :is(input[type='range'], input[type='checkbox'], progress) {
+  accent-color: var(--accent);
+}
+
+[data-appearance='light'] .stage {
+  background: radial-gradient(ellipse at 50% 42%, #eae2f7, #f6f3fa 78%);
+}
+[data-appearance='light'] .video-frame {
+  outline-color: #b7a9c7;
+  box-shadow: 0 9px 26px #3d285537;
+}
+[data-appearance='light'] .render-overlay {
+  color: #fff;
+}
+[data-appearance='light'] .render-overlay code {
+  color: #eee4ff;
+}
+[data-appearance='light'] .render-overlay button {
+  color: #352449;
+  background-color: #f5edff;
+  border-color: #d5c8e2;
+}
+[data-appearance='light'] .render-overlay button:hover:not(:disabled) {
+  background-color: #e6d5fa;
+}
+
+[data-appearance='light']
+  :is(
+    .tabs button[aria-pressed='true'],
+    .message-tools .me,
+    .segmented button[aria-pressed='true'],
+    .play
+  ) {
+  color: #512c96;
+  background-color: #eee6fb;
+}
+[data-appearance='light'] .segmented button[aria-pressed='true'] {
+  border-color: #b69adf;
+}
+[data-appearance='light'] .message {
+  background-color: #f8f6fb;
+}
+[data-appearance='light'] .message input:not([type]) {
+  background-color: #fff;
+}
+[data-appearance='light'] .message.selected {
+  border-color: #9778ca;
+}
+[data-appearance='light'] .swatch[aria-pressed='true'] {
+  outline-color: #60478a;
+}
+[data-appearance='light'] .switch input {
+  background: #ded8e8;
+  border-color: #b4a9c6;
+}
+[data-appearance='light'] .switch input::after {
+  background-color: #fff;
+}
+[data-appearance='light'] .switch input:checked {
+  background: #7049b7;
+  border-color: #7049b7;
+}
+[data-appearance='light'] .clip-info {
+  color: #59349c;
+}
+[data-appearance='light'] .clip-wave {
+  color: #7955b6;
+  background-color: #eee7f8;
+}
+
+[data-appearance='light'] .ruler {
+  border-color: #d5cce2;
+}
+[data-appearance='light'] .track {
+  background: repeating-linear-gradient(
+    90deg,
+    #f4f0f8,
+    #f4f0f8 calc(10% - 1px),
+    #e3dcec calc(10% - 1px),
+    #e3dcec 10%
+  );
+}
+[data-appearance='light'] .timeline-message {
+  color: #533480;
+  background-color: #e9dff7;
+  border-color: #c2aadd;
+}
+[data-appearance='light'] .timeline-voice {
+  color: #246854;
+  background-color: #d9eee5;
+  border-color: #8cb9a8;
+}
+[data-appearance='light'] .timeline-message:hover:not(:disabled) {
+  background-color: #dfcff3;
+}
+[data-appearance='light'] .timeline-voice:hover:not(:disabled) {
+  background-color: #c7e6d8;
+}
+[data-appearance='light'] .track button.active {
+  outline-color: #6944aa;
+}
+[data-appearance='light'] .playhead,
+[data-appearance='light'] .playhead::before {
+  background-color: #7046bd;
+}
+
+[data-appearance='light'] .media-warning {
+  color: #854b05;
+}
+[data-appearance='light'] .toast {
+  color: #3e2d56;
+  background-color: #fcfaff;
+  border-color: #c4b2da;
+  box-shadow: 0 5px 20px #39285824;
+}
+[data-appearance='light'] .toast.error {
+  color: #862d4b;
+  border-color: #cf8da6;
+}

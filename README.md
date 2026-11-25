@@ -33,13 +33,7 @@ Space toggles playback when focus is outside a control. Ctrl/Cmd+Z undoes a proj
 
 ## Architecture
 
-- **React and TypeScript** own the editing workspace. Components send project edits to Redux Toolkit and pass playback position and media separately.
-- **Redux Toolkit** holds serializable settings, conversation data, media IDs, trim bounds, and 60 in-session history snapshots. A preset or audio replacement is a single undo step. Binary media and browser objects live outside Redux.
-- **Timeline engine** (`src/engines/timeline.ts`) compiles story order and trim bounds into one schedule. Preview, timeline tracks, audio, and export consume that schedule.
-- **Canvas renderer** (`src/engines/renderer.ts`) ports the prototype's chat visuals. It draws a 720 × 1280 frame for an explicit time. Both preview and export call the same renderer.
-- **Audio engine** (`src/engines/audio.ts`) decodes clips, extracts waveform peaks, and schedules voice, synthesized message sounds, and optional music against the Web Audio clock. Preview and export derive their frame time from that clock. The microphone recorder owns its stream and releases the tracks when it finishes.
-- **Export engine** (`src/engines/export.ts`) combines an isolated 30 fps canvas stream and a Web Audio mix in the browser's MediaRecorder. It picks an available container and cleans up streams after completion, cancellation, or failure.
-- **IndexedDB** stores the active project and media blobs in separate object stores. Reloading restores project content and assets. Blobs are kept so undo can revisit earlier imports in the same session.
+See [Architecture](docs/architecture.md) for the folder map and how project edits flow through preview, audio, and video export.
 
 ## Scope and limitations
 

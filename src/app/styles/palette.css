@@ -1,0 +1,158 @@
+:root {
+  --blue-ink: #bacaff;
+  --blue-wash: #2c3763;
+  --coral-ink: #ffb4b2;
+  --coral-wash: #512c40;
+  --coral-border: #975066;
+  --teal-ink: #92f2db;
+  --teal-wash: #183f3d;
+  --teal-border: #43887c;
+  --violet-ink: #e0beff;
+  --violet-wash: #40305b;
+  --stage-base: #171827;
+  --stage-blue: #344e8d80;
+  --stage-coral: #963b6863;
+  --stage-teal: #17696356;
+  --stage-dot: #c4bbfa25;
+}
+
+:root[data-appearance='light'] {
+  --blue-ink: #2747ac;
+  --blue-wash: #e4ebff;
+  --coral-ink: #9b2b50;
+  --coral-wash: #ffdee2;
+  --coral-border: #d6879b;
+  --teal-ink: #0a6251;
+  --teal-wash: #ccf2e8;
+  --teal-border: #65aa99;
+  --violet-ink: #692ab1;
+  --violet-wash: #efe0ff;
+  --stage-base: #f2efff;
+  --stage-blue: #a3bcffb8;
+  --stage-coral: #ffbfc5a6;
+  --stage-teal: #91e6d3b0;
+  --stage-dot: #55478630;
+  background: #f6f5fb;
+}
+
+.studio .brand-icon {
+  color: #fff;
+  background: linear-gradient(145deg, #3d56d9 16%, #723ac7 63%, #a73388);
+  box-shadow: 0 4px 13px #573bc849;
+}
+.studio .brand h1 span {
+  color: var(--violet-ink);
+}
+.studio .save-state.saved svg {
+  color: var(--teal-ink);
+}
+
+.studio .primary {
+  color: white;
+  background: linear-gradient(110deg, #314ed0, #593fc5 66%, #7433b6);
+  border-color: #9b88ff74;
+  box-shadow: 0 3px 12px #4938c342;
+}
+.studio .primary:hover:not(:disabled) {
+  background: linear-gradient(110deg, #2842b8, #5034b2 66%, #6528a3);
+}
+.studio .primary:disabled {
+  box-shadow: none;
+}
+
+.studio .stage {
+  background:
+    radial-gradient(circle, var(--stage-dot) 0.85px, transparent 1.1px) 0 0 /
+      18px 18px,
+    radial-gradient(ellipse at 15% 15%, var(--stage-blue), transparent 62%),
+    radial-gradient(ellipse at 91% 14%, var(--stage-coral), transparent 63%),
+    radial-gradient(ellipse at 84% 95%, var(--stage-teal), transparent 61%),
+    var(--stage-base);
+}
+.studio .video-frame {
+  outline: 1px solid #ae9edf92;
+}
+.studio .play {
+  color: var(--blue-ink);
+  background: var(--blue-wash);
+}
+.studio .play:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--blue-wash), var(--blue-ink) 14%);
+}
+
+.tabs button[data-panel='script'] {
+  --tab-ink: var(--coral-ink);
+  --tab-wash: var(--coral-wash);
+}
+.tabs button[data-panel='audio'] {
+  --tab-ink: var(--teal-ink);
+  --tab-wash: var(--teal-wash);
+}
+.tabs button[data-panel='style'] {
+  --tab-ink: var(--blue-ink);
+  --tab-wash: var(--blue-wash);
+}
+.tabs button[data-panel='scene'] {
+  --tab-ink: var(--violet-ink);
+  --tab-wash: var(--violet-wash);
+}
+.studio .tabs button svg {
+  color: var(--tab-ink);
+}
+.studio .tabs button[aria-pressed='true'] {
+  color: var(--tab-ink);
+  background: var(--tab-wash);
+  border-color: color-mix(in srgb, var(--tab-ink) 26%, transparent);
+}
+.studio .tabs button:not([aria-pressed='true']):hover {
+  background: color-mix(in srgb, var(--tab-wash) 52%, transparent);
+}
+
+.studio .message-tools .me {
+  color: var(--coral-ink);
+  background: var(--coral-wash);
+}
+.studio .message.selected {
+  border-color: var(--coral-border);
+}
+.studio :is(.clip-info, .record-bar code) {
+  color: var(--teal-ink);
+}
+.studio .clip-wave {
+  color: var(--teal-ink);
+  background: var(--teal-wash);
+  border: 1px solid color-mix(in srgb, var(--teal-border), transparent 37%);
+}
+.studio .field input[type='range'] {
+  accent-color: var(--teal-border);
+}
+.studio .record-dot {
+  background: #f15773;
+}
+
+.studio .timeline-message {
+  color: var(--coral-ink);
+  background: var(--coral-wash);
+  border-color: var(--coral-border);
+}
+.studio .timeline-voice {
+  color: var(--teal-ink);
+  background: var(--teal-wash);
+  border-color: var(--teal-border);
+}
+.studio .timeline-message:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--coral-wash), var(--coral-ink) 14%);
+}
+.studio .timeline-voice:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--teal-wash), var(--teal-ink) 14%);
+}
+.track-labels > span:nth-child(2) svg {
+  color: var(--coral-ink);
+}
+.track-labels > span:nth-child(3) svg {
+  color: var(--teal-ink);
+}
+.studio .playhead,
+.studio .playhead::before {
+  background: var(--blue-ink);
+}

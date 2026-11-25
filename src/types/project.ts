@@ -1,0 +1,31 @@
+export type Person = 'me' | 'them';
+export type Message = {
+  id: string;
+  sender: Person;
+  text: string;
+  placement: 'before' | 'after';
+};
+export type Avatar = { palette: number; asset?: string };
+export type Project = {
+  title: string;
+  platform: 'whatsapp' | 'instagram';
+  theme: 'dark' | 'light';
+  frameStyle: 'floating' | 'fullscreen';
+  backdrop: 'midnight' | 'sunset' | 'emerald' | 'minimal';
+  contactName: string;
+  contactStatus: string;
+  myName: string;
+  voiceSender: Person;
+  avatars: Record<Person, Avatar>;
+  heartReaction: boolean;
+  overlayCaption: string;
+  msgSfxEnabled: boolean;
+  msgSfxStyle: 'pop' | 'chime' | 'whatsapp';
+  chatBgMusicEnabled: boolean;
+  chatBgMusicStyle: 'lofi' | 'musicbox';
+  messages: Message[];
+  audio: { id: string; name: string; duration: number };
+  trimStart: number;
+  trimEnd: number;
+};
+export type Patch = (patch: Partial<Project>) => void;

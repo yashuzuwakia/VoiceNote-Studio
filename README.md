@@ -2,6 +2,8 @@
 
 Create 9:16 chat videos around a voice note. Edit the conversation, import or record audio, trim the take, and download a 720 × 1280 video with synchronized sound. The starter project includes a synthesized melody and a sample conversation.
 
+[Open VoiceNote Studio](https://yashuzuwakia.github.io/VoiceNote-Studio/)
+
 ## Run locally
 
 Use Node.js 22 and npm. From this directory, run:
